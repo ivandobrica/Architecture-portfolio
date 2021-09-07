@@ -1,0 +1,35 @@
+.banner {
+    padding: 8rem 2rem 3rem;
+    width: 100vw;
+    height: 100vh;
+
+    &__main-heading {
+        font-size: 2rem;
+        text-transform: uppercase;
+        .subtitle {
+            font-size: 1rem;
+        }
+        &::before {
+
+        }
+        &::after {
+
+        }
+    }
+    // &__sub-heading {
+    //     font-size: 1.2rem
+    // }
+}
+
+// @include lg {
+//     .banner {
+//         flex-direction: row;
+//         justify-content: space-between;
+//         &__heading {
+//             width: 30%;
+//         }
+//         &__image {
+//             width: 60%;
+//         }
+//     }
+// }

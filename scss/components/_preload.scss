@@ -1,0 +1,42 @@
+.preload-wrapper {
+    width: 100vw;
+    height: 100vh;
+    @include flex($justify-content: center, $align-items: center);
+    position: fixed;
+    background-color: $whitesmoke;
+    transition: opacity 1s ease 5s;
+    z-index: 9;
+}
+
+.preload {
+    width: 100%;
+}
+
+.preload-finish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.buildings {
+    fill: none;
+    stroke: $black;
+    stroke-miterlimit: 10;
+    stroke-dashoffset: 1350;
+    stroke-dasharray: 1350;
+    animation: buildings 3s 0.5s linear forwards;
+}
+
+.line {
+    fill: none;
+    stroke: $black;
+    stroke-miterlimit: 10;
+    stroke-dashoffset: 600;
+    stroke-dasharray: 600;
+    animation: line 5s linear forwards;
+}
+
+@include lg {
+    .preload {
+        width: 50%;
+    }
+}

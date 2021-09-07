@@ -1,0 +1,106 @@
+.projects {
+    overflow-y: auto;
+    
+    .horizontal__wrapper{
+        background-color: $white;
+        display: flex;
+        height: 100vh;
+        width: 600vw;
+        position: relative;
+    }
+
+    .project {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+            filter: grayscale(100%);
+            
+        }
+
+        &__info {
+            color: $orange;
+            position: relative;
+            &::before {
+                content: "";
+                width: 92vw;
+                height: 93vh;
+                border: 1px solid red;
+                z-index: 99;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .project__a .project__image {
+        background-image: url("../../assets/Wohnbau/e.jpg");
+    }
+    .project__b .project__image {
+        background-image: url("../../assets/Entwerfen/D.jpg");
+    }
+    .project__c .project__image {
+        background-image: url("../../assets/Tiny House/1.jpg");
+    }
+    .project__d .project__image {
+        background-image: url("../../assets/Städtebau/a.jpg");
+    }
+    .project__e .project__image {
+        background-image: url("../../assets/Gebäudelehre/1.jpg");
+    }
+    .project__f .project__image {
+        background-image: url("../../assets/Hochbau/1.jpg");
+    }
+
+    .div3{
+        height: 100vh;
+        width: 100vw;
+        background: #39adff;
+    }
+}
+
+@include md {
+    .projects {
+        .project {
+            &__info {
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 95vw;
+                    height: 96vh;
+                }
+            }
+        }
+    }
+}
+
+@include lg {
+    .projects {
+        .project {
+            &__info {
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 97vw;
+                    height: 93vh;
+                }
+            }
+        }
+    }
+}

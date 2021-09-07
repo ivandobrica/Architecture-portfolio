@@ -54,6 +54,6 @@ $screen-xl-min: 1201px;
     display: block;
     width: 0;
     height: 1px;
-    background-color: black;
+    background-color: $black;
     transition: 0.5s;
 }

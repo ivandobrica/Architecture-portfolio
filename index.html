@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ivan Dobrica">
+	<meta name="description" content="Architecture portfolio website">
+	<meta name="keywords" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preload stylesheet" href="./scss/main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- <section class="preload-wrapper">
+        <div class="preload">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 595.28 841.89" style="enable-background:new 0 0 595.28 841.89;" xml:space="preserve">
+                <path class="buildings" d="M18.41,454.05L18.41,454.05v-26.3h8.85v8.82h3.12v17.48h4.86v-20.9h10.06v-4.63h5.03v25.31h3.12v-28.05h6.77
+                    v-12.16h9.02v4.11h2.08v9.77h3.12v-13.88h4.51v-4.11h6.94v9.08h1.39v-2.74h2.08v6.85h3.12v-5.88h2.78v-6.45h2.93v6.08h1.69v16.37
+                    h1.8v6c0,0,1.7,0.73,2.43,0c0.73-0.73,0-16.28,0-16.28h1.91v-6.34h2.26v4.11h2.28v2.57l0.94,0.94v10.03h7.3v7.54h3.7v-17.25h2.29
+                    v-13.59h2.22v-4.45h3.12v2.06h2.08v4.56h3.12V420h3.3v-11.35h6.59v9.25h1.91v18.5h3.47v-23.34h15.96v-11.62h15.53v36.68h9.81v-30.6
+                    h10.82v28.21h7.31v-15.55h9.24v-4.27h8.32v12.85h4.18V425h1.89v-4.97h3.12v19.7h2.95v-7.71h7.04v-10.11v-14.39h3.36v9.29h2.64v9.37
+                    h2.62v7.38h2.25v20.48h3.19v-20.56h2.82v-10.55h4.5V419h6.76v24.79h3.81v-8.69h11.09v-11.14h11.78v19.82h8.51v-36.27h5.98v15.93
+                    h3.47v-7.31h4.39v10.22h6.21v15.36h9.73v12.32h4.85v-27.28h16.09v9.05h8.77v-19.98h11.05v38.21"/>
+                <line class="line" x1="0" y1="454.05" x2="595.28" y2="454.05"/>
+            </svg>
+        </div>
+    </section> -->
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <header>
+        <nav class="navigation">
+            <a class="logo" href="index.html">MH</a>
+            <div class="navigation__links">
+                <div class="navigation__list">
+                    <a class="navigation__item" href="#projects">Projects</a>
+                    <a class="navigation__item" href="#about">About</a>
+                    <a class="navigation__item" href="#contact">Contact</a>
+                </div>
+                <button class="hamburger">
+                    <span class="hamburger__bar1"></span>
+                    <span class="hamburger__bar2"></span>
+                    <span class="hamburger__bar3"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="overlay">
+            <div class="overlay__list">
+              <a class="overlay__item" href="#projects">Projects</a>
+              <a class="overlay__item" href="#about">About</a>
+              <a class="overlay__item" href="#contact">Contact</a>
+            </div>
+            <div class="overlay__info">
+                <div class="overlay__mail">
+                    <a class="overlay__mail-item" href="mailto:">martinahrgovan@gmail.com</a>
+                </div>
+                <div class="overlay__social">
+                    <a class="overlay__social-item" href=""><i class="fab fa-facebook"></i>Facebook</a>
+                    <a class="overlay__social-item" href=""><i class="fab fa-instagram"></i>Instagram</a>
+                    <a class="overlay__social-item" href=""><i class="fab fa-linkedin"></i>Linkedin</a>
+                </div>
+            </div>
+        </div>
+          
+        <section class="banner">
+            <div class="banner__heading">
+                <h1 class="banner__main-heading"><span class="new-line">Martina</span> <span class="subtitle">Hrgovan</span></h1>
+                <p class="banner__sub-heading"><span class="new-line">Architecture</span> Student</p>
+            </div>
+            <div class="banner__image">
+                
+            </div>
+        </section>
+    </header>
+
+    <div class="project__start">
+        <p class="project__start-info"><span class="new-line">Take a</span> <span class="new-line">closer look</span> at my projects<span class="orange-letter">!</span></p>
+        <div class="scroll-down">
+            <a class="scroll-down__link" href="#projects">Scroll</a>
+        </div>
+    </div>
+    <section class="projects" id="projects">
+        <div class="horizontal__wrapper">
+            <div class="project project__a">
+                <div class="project__image"></div>
+                <div class="project__info">
+                    <h2>Base 19+</h2>
+                    <p>Bachelor Entwerfen "Geht noch was?"</p>
+                    <a href="">View More</a>
+                </div>
+            </div>
+            <div class="project project__b">
+                <div class="project__image"></div>
+                <div class="project__info">
+                    <h2>Base 19+</h2>
+                    <p>Bachelor Entwerfen "Geht noch was?"</p>
+                    <a href="">View More</a>
+                </div>
+            </div>
+            <div class="project project__c">
+                <div class="project__image"></div>
+                <div class="project__info">
+                    <h2>Base 19+</h2>
+                    <p>Bachelor Entwerfen "Geht noch was?"</p>
+                    <a href="">View More</a>
+                </div>
+            </div>
+            <div class="project project__d">
+                <div class="project__image"></div>
+                <div class="project__info">
+                    <h2>Base 19+</h2>
+                    <p>Bachelor Entwerfen "Geht noch was?"</p>
+                    <a href="">View More</a>
+                </div>
+            </div>
+            <div class="project project__e">
+                <div class="project__image"></div>
+                <div class="project__info">
+                    <h2>Base 19+</h2>
+                    <p>Bachelor Entwerfen "Geht noch was?"</p>
+                    <a href="">View More</a>
+                </div>
+            </div>
+            <div class="project project__f">
+                <div class="project__image"></div>
+                <div class="project__info">
+                    <h2>Base 19+</h2>
+                    <p>Bachelor Entwerfen "Geht noch was?"</p>
+                    <a href="">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="div3"></div>
+    </section>
+
+</body>
+<script src="./js/app.js"></script>
+</html>

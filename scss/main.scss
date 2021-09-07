@@ -1,0 +1,54 @@
+@charset 'utf-8';
+//Abstracts
+@import "abstracts/__abstracts-dir";
+//Base Styles
+@import "base/__base-dir";
+//Components
+@import "components/__components-dir";
+//Layout
+@import "layouts/__layouts-dir";
+//Pages
+@import "pages/__pages-dir";
+//Vendors
+@import "vendors/_vendors-dir";
+  
+
+
+.is-open {
+    visibility: visible;
+    transform: translate(0, 0);
+}
+
+.is-active {
+    .hamburger {
+        &__bar1 {
+            width: 80%;
+        }
+        &__bar2 {
+            width: 40%;
+        }
+        &__bar3 {
+            width: 20%;
+        }
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.new-line {
+    display: block;
+}
+
+.orange-letter {
+    color: $orange;
+}
+
+
+
+
