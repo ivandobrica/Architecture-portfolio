@@ -18,17 +18,20 @@ function myFunction() {
 
 
 //page loader
-// window.addEventListener("load", () => {
-//   const preload = document.querySelector(".preload-wrapper");
-//   preload.classList.add("preload-finish");
-// });
+let body = document.querySelector("body");
+window.addEventListener("load", () => {
+  const preload = document.querySelector(".preload-wrapper");
+  preload.classList.add("preload-finish");
+  setTimeout(function() {
+    body.classList.remove("no-scroll");
+  }, 5000);
+});
 
 
 //hamburger action
 let hamburger = document.querySelector(".hamburger");
 let link = document.querySelector(".overlay__item");
 let overlay = document.querySelector(".overlay");
-let body = document.querySelector("body");
 let navigationList = document.querySelector(".navigation__list");
 let overlayAction = [hamburger, link];
 for(let i = 0; i < overlayAction.length; i++) {

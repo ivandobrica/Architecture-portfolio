@@ -136,7 +136,7 @@ ul {
   background-color: #f5f5f5;
   -webkit-transition: opacity 1s ease 5s;
   transition: opacity 1s ease 5s;
-  z-index: 9;
+  z-index: 10;
 }
 
 .preload {
