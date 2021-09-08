@@ -2,34 +2,164 @@
     padding: 8rem 2rem 3rem;
     width: 100vw;
     height: 100vh;
-
+    height: calc(var(--vh, 1vh) * 100);
+    &__heading {
+        height: 50%;
+    }
     &__main-heading {
         font-size: 2rem;
         text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        line-height: 0.8;
+        .new-line {
+            line-height: 0.7;
+        }
         .subtitle {
-            font-size: 1rem;
+            font-size: 1.25rem;
+            line-height: 0.7;
         }
         &::before {
-
+            content: "";
+            width: 150%;
+            height: 1px;
+            background-color: $orange;
+            position: absolute;
+            bottom: -1rem;
+            left: -1rem;
         }
         &::after {
-
+            content: "";
+            width: 1px;
+            height: 400%;
+            background-color: $orange;
+            position: absolute;
+            top: 50%;
+            right: -10%;
         }
     }
-    // &__sub-heading {
-    //     font-size: 1.2rem
-    // }
+    &__sub-heading {
+        padding-top: 1.5rem;
+        font-size: 0.75rem;
+        width: auto;
+    }
+
+    &__image {
+        height: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__info {
+        transform: rotate(-90deg);
+        color: $orange;
+        font-size: 3rem;
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+        &::after {
+            content: "Portfolio";
+            text-transform: uppercase;
+            position: absolute;
+            top: 1rem;
+            left: 0.5rem;
+            -webkit-text-stroke-color: $orange;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 2px;
+            opacity: 0.2;
+        }
+    }
+    .square--green {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        width: 200px;
+        height: 300px;
+        background-color: #EFEFEF;
+    }
+    .square--orange {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100px;
+        height: 100px;
+        background-color: $orange;
+    }
 }
 
-// @include lg {
-//     .banner {
-//         flex-direction: row;
-//         justify-content: space-between;
-//         &__heading {
-//             width: 30%;
-//         }
-//         &__image {
-//             width: 60%;
-//         }
-//     }
-// }
+@include md {
+    .banner {
+        padding: 10rem 3rem 3rem;
+        &__main-heading {
+            font-size: 4rem;
+            .subtitle {
+                font-size: 1.75rem;
+            }
+        }
+        &__sub-heading {
+            font-size: 1.25rem;
+        }
+
+        &__info {
+            font-size: 5rem;
+        }
+        .square--green {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            width: 500px;
+            height: 700px;
+            background-color: #EFEFEF;
+        }
+        .square--orange {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 250px;
+            height: 250px;
+            background-color: $orange;
+        }
+    }
+}
+@include lg {
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__heading {
+            height: 100%;
+            width: 100%;
+            padding-top: 5rem;
+            padding-left: 5rem;
+        }
+        &__image {
+            width: 100%;
+            height: 100%;
+            justify-content: flex-start;
+        }
+        &__main-heading {
+            font-size: 4rem;
+            .subtitle {
+                font-size: 2rem;
+            }
+        }
+        &__sub-heading {
+            font-size: 1.25rem;
+        }
+
+        &__info {
+            font-size: 5rem;
+        }
+        .square--green {
+            width: 600px;
+            height: 500px;
+            margin-right: 2rem;
+        }
+        .square--orange {
+            width: 250px;
+            height: 250px;
+        }
+    }
+}

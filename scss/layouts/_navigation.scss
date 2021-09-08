@@ -2,7 +2,7 @@
     @include flex($justify-content: space-between, $align-items: center);
     width: 100%;
     position: fixed;
-    z-index: 5;
+    z-index: 9;
     padding: 1rem 2rem;
     &__list {
         display: none;
@@ -17,7 +17,6 @@
         @include flex($justify-content: space-between, $flex-direction: column);
         height: 1.25rem;
         width: 2rem;
-        margin: 0 1rem;
         border: none;
         background: none;
         cursor: pointer;
@@ -39,7 +38,7 @@
     width: 100%;
     transform: translate(100%, 0);
     position: fixed;
-    z-index: 1;
+    z-index: 8;
     top: 0;
     right: 0;
     background-color: $whitesmoke;
@@ -138,6 +137,9 @@
                     width: 100%;
                 }
             }
+        }
+        .hamburger {
+            margin: 0 1rem;
         }
     }
 

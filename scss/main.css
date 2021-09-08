@@ -178,15 +178,188 @@ ul {
   padding: 8rem 2rem 3rem;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.banner__heading {
+  height: 50%;
 }
 
 .banner__main-heading {
   font-size: 2rem;
   text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  line-height: 0.8;
+}
+
+.banner__main-heading .new-line {
+  line-height: 0.7;
 }
 
 .banner__main-heading .subtitle {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height: 0.7;
+}
+
+.banner__main-heading::before {
+  content: "";
+  width: 150%;
+  height: 1px;
+  background-color: #f95f51;
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+}
+
+.banner__main-heading::after {
+  content: "";
+  width: 1px;
+  height: 400%;
+  background-color: #f95f51;
+  position: absolute;
+  top: 50%;
+  right: -10%;
+}
+
+.banner__sub-heading {
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  width: auto;
+}
+
+.banner__image {
+  height: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.banner__info {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: #f95f51;
+  font-size: 3rem;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.banner__info::after {
+  content: "Portfolio";
+  text-transform: uppercase;
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  -webkit-text-stroke-color: #f95f51;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  opacity: 0.2;
+}
+
+.banner .square--green {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 200px;
+  height: 300px;
+  background-color: #EFEFEF;
+}
+
+.banner .square--orange {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #f95f51;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    padding: 10rem 3rem 3rem;
+  }
+  .banner__main-heading {
+    font-size: 4rem;
+  }
+  .banner__main-heading .subtitle {
+    font-size: 1.75rem;
+  }
+  .banner__sub-heading {
+    font-size: 1.25rem;
+  }
+  .banner__info {
+    font-size: 5rem;
+  }
+  .banner .square--green {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 500px;
+    height: 700px;
+    background-color: #EFEFEF;
+  }
+  .banner .square--orange {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    height: 250px;
+    background-color: #f95f51;
+  }
+}
+
+@media (min-width: 1025px) {
+  .banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .banner__heading {
+    height: 100%;
+    width: 100%;
+    padding-top: 5rem;
+    padding-left: 5rem;
+  }
+  .banner__image {
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .banner__main-heading {
+    font-size: 4rem;
+  }
+  .banner__main-heading .subtitle {
+    font-size: 2rem;
+  }
+  .banner__sub-heading {
+    font-size: 1.25rem;
+  }
+  .banner__info {
+    font-size: 5rem;
+  }
+  .banner .square--green {
+    width: 600px;
+    height: 500px;
+    margin-right: 2rem;
+  }
+  .banner .square--orange {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .projects {
@@ -320,7 +493,7 @@ ul {
 }
 
 .project__start {
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,7 +515,7 @@ ul {
   border: 2px solid #f95f51;
   border-radius: 20px;
   position: absolute;
-  bottom: 5rem;
+  bottom: 2rem;
   height: 50px;
   width: 30px;
   margin: 0 auto;
@@ -378,6 +551,9 @@ ul {
 }
 
 @media (min-width: 1025px) {
+  .project__start {
+    height: 100vh;
+  }
   .project__start-info {
     padding-bottom: 5rem;
     font-size: 5rem;
@@ -396,7 +572,7 @@ ul {
           align-items: center;
   width: 100%;
   position: fixed;
-  z-index: 5;
+  z-index: 9;
   padding: 1rem 2rem;
 }
 
@@ -422,7 +598,6 @@ ul {
           flex-direction: column;
   height: 1.25rem;
   width: 2rem;
-  margin: 0 1rem;
   border: none;
   background: none;
   cursor: pointer;
@@ -444,7 +619,7 @@ ul {
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
   position: fixed;
-  z-index: 1;
+  z-index: 8;
   top: 0;
   right: 0;
   background-color: #f5f5f5;
@@ -610,6 +785,9 @@ ul {
   }
   .navigation__item:hover::after {
     width: 100%;
+  }
+  .navigation .hamburger {
+    margin: 0 1rem;
   }
   .overlay {
     display: -webkit-box;

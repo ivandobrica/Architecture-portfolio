@@ -1,5 +1,5 @@
 .project__start {
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@
         border: 2px solid $orange;
         border-radius: 20px;
         position: absolute;
-        bottom: 5rem;
+        bottom: 2rem;
         height: 50px;
         width: 30px;
         margin: 0 auto;
@@ -49,6 +49,7 @@
 
 @include lg {
     .project__start {
+        height: 100vh;
         &-info {
             padding-bottom: 5rem;
             font-size: 5rem;
