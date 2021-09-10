@@ -183,6 +183,8 @@ ul {
 
 .banner__heading {
   height: 50%;
+  z-index: 1;
+  position: relative;
 }
 
 .banner__main-heading {
@@ -363,7 +365,7 @@ ul {
 }
 
 .projects {
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .projects .horizontal__wrapper {
@@ -397,19 +399,29 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
   position: absolute;
   top: 0;
   left: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
 }
 
 .projects .project__info {
   color: #f95f51;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .projects .project__info::before {
@@ -417,7 +429,7 @@ ul {
   width: 92vw;
   height: 93vh;
   border: 1px solid red;
-  z-index: 99;
+  pointer-events: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -425,39 +437,38 @@ ul {
           transform: translate(-50%, -50%);
 }
 
-.projects .project__a .project__image {
+.projects .project__view-more {
+  width: auto;
+}
+
+.projects .project .project__a {
   background-image: url("../../assets/Wohnbau/e.jpg");
 }
 
-.projects .project__b .project__image {
+.projects .project .project__b {
   background-image: url("../../assets/Entwerfen/D.jpg");
 }
 
-.projects .project__c .project__image {
+.projects .project .project__c {
   background-image: url("../../assets/Tiny House/1.jpg");
 }
 
-.projects .project__d .project__image {
+.projects .project .project__d {
   background-image: url("../../assets/Städtebau/a.jpg");
 }
 
-.projects .project__e .project__image {
+.projects .project .project__e {
   background-image: url("../../assets/Gebäudelehre/1.jpg");
 }
 
-.projects .project__f .project__image {
+.projects .project .project__f {
   background-image: url("../../assets/Hochbau/1.jpg");
-}
-
-.projects .div3 {
-  height: 100vh;
-  width: 100vw;
-  background: #39adff;
 }
 
 @media (min-width: 768px) {
   .projects .project__info {
     position: relative;
+    font-size: 1.5rem;
   }
   .projects .project__info::before {
     content: "";
@@ -557,6 +568,151 @@ ul {
   .project__start-info {
     padding-bottom: 5rem;
     font-size: 5rem;
+  }
+}
+
+.about {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+}
+
+.about__info {
+  position: relative;
+  width: 80%;
+  height: 100%;
+}
+
+.about__info::before {
+  content: "";
+  background-image: url(../../assets/juli-kosolapova-OwNj1uQWPVY-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about__heading {
+  width: 80%;
+  color: #f95f51;
+  padding-bottom: 0.5rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.about__next, .about__back {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0.5rem;
+}
+
+.about__next {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.about__back {
+  color: #f95f51;
+}
+
+.about__welcome {
+  font-size: 1.5rem;
+}
+
+.about__CV-heading {
+  text-decoration: underline;
+}
+
+.about__CV-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about__CV-skill {
+  width: 50%;
+}
+
+.about__CV-lang {
+  width: 50%;
+}
+
+.about .is-open::before {
+  content: none;
+}
+
+@media (min-width: 768px) {
+  .about__info {
+    height: 70%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .about__info {
+    margin-right: 10%;
+    width: 70%;
+    height: 70%;
+    position: relative;
+  }
+  .about__info::before {
+    content: "";
+    background-image: url(../../assets/valentin-balan-pAwgAz3rkcY-unsplash.jpg);
+  }
+  .about__info::after {
+    content: "";
+    width: 1px;
+    height: 135%;
+    background-color: #f95f51;
+    position: absolute;
+    top: -10%;
+    right: -5%;
+  }
+  .about__heading {
+    display: none;
+  }
+  .about__welcome {
+    width: 70%;
+    margin-right: 10%;
+    text-align: right;
+    margin-top: 3rem;
+    position: relative;
+  }
+  .about__welcome::before {
+    content: "";
+    width: 120%;
+    height: 1px;
+    background-color: #f95f51;
+    position: absolute;
+    top: -1rem;
+    left: -2.5rem;
   }
 }
 
@@ -858,5 +1014,11 @@ ul {
 
 .orange-letter {
   color: #f95f51;
+}
+
+.filter {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.3;
 }
 /*# sourceMappingURL=main.css.map */

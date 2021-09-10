@@ -18,14 +18,14 @@ function myFunction() {
 
 
 //page loader
-let body = document.querySelector("body");
-window.addEventListener("load", () => {
-  const preload = document.querySelector(".preload-wrapper");
-  preload.classList.add("preload-finish");
-  setTimeout(function() {
-    body.classList.remove("no-scroll");
-  }, 5000);
-});
+// let body = document.querySelector("body");
+// window.addEventListener("load", () => {
+//   const preload = document.querySelector(".preload-wrapper");
+//   preload.classList.add("preload-finish");
+//   setTimeout(function() {
+//     body.classList.remove("no-scroll");
+//   }, 5000);
+// });
 
 
 //hamburger action
@@ -47,7 +47,7 @@ for(let i = 0; i < overlayAction.length; i++) {
 //projects horizontal scroll
 let vwWidth = window.innerWidth;
 let controller = new ScrollMagic.Controller();
-//for horizontal scrolling
+
 let horizontalSlide = new TimelineMax()
   .to(".horizontal__wrapper", 0.5, {x: 0, ease: Power1.easeOut}, )
   .to(".horizontal__wrapper", 1, {x: -vwWidth, ease: Power1.easeOut}, )	
@@ -70,3 +70,34 @@ new ScrollMagic.Scene({
 .setPin('.horizontal__wrapper')
 .setTween(horizontalSlide)
 .addTo(controller)
+
+
+//project view more button
+let projectImage = document.querySelectorAll(".project__image");
+let viewMore = document.querySelectorAll(".project__view-more");
+for(let i = 0; i < viewMore.length; i++) {
+  viewMore[i].addEventListener("mouseover", function() {
+    projectImage[i].classList.remove("filter");
+  })
+  viewMore[i].addEventListener("mouseout", function() {
+    for(let i = 0; i < projectImage.length; i++) {
+      projectImage[i].classList.add("filter");
+    }
+  })
+}
+
+
+//remove about me image, show CV
+let showCV = document.querySelector(".about__next");
+let imgContainer = document.querySelector(".about__info");
+let showImg = document.querySelector(".about__back");
+showCV.addEventListener("click", function() {
+  imgContainer.classList.add("is-open");
+  showImg.classList.remove("hidden");
+  showCV.classList.add("hidden");
+})
+showImg.addEventListener("click", function() {
+  imgContainer.classList.remove("is-open");
+  showImg.classList.add("hidden");
+  showCV.classList.remove("hidden");
+})

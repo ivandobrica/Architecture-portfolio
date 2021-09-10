@@ -1,0 +1,124 @@
+.about {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    &__info {
+        position: relative;
+        width: 80%;
+        height: 100%;
+        &::before {
+            content: "";
+            background-image: url(../../assets/juli-kosolapova-OwNj1uQWPVY-unsplash.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__heading {
+        width: 80%;
+        color: $orange;
+        padding-bottom: 0.5rem;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
+    &__next,
+    &__back {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem;
+    }
+    &__next {
+        color: $white;
+        border: 1px solid $white;
+    }
+    &__back {
+        color: $orange;
+    }
+    &__welcome {
+        font-size: 1.5rem;
+    }
+    &__CV-heading {
+        text-decoration: underline;
+    }
+    &__CV-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__CV-skill {
+        width: 50%;
+    }
+    &__CV-lang {
+        width: 50%;
+    }
+
+    .is-open {
+        &::before { 
+            content: none;
+        }
+    }
+}
+
+
+@include md {
+    .about {
+        &__info {
+            height: 70%;
+        }
+    }
+}
+
+@include lg {
+    .about {
+        &__info {
+            margin-right: 10%;
+            width: 70%;
+            height: 70%;
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url(../../assets/valentin-balan-pAwgAz3rkcY-unsplash.jpg);
+            }
+            &::after {
+                content: "";
+                width: 1px;
+                height: 135%;
+                background-color: $orange;
+                position: absolute;
+                top: -10%;
+                right: -5%;
+            }
+        }
+        &__heading { 
+            display: none;
+        }
+        &__welcome {
+            width: 70%;
+            margin-right: 10%;
+            text-align: right;
+            margin-top: 3rem;
+            position: relative;
+            &::before {
+                content: "";
+                width: 120%;
+                height: 1px;
+                background-color: $orange;
+                position: absolute;
+                top: -1rem;
+                left: -2.5rem;
+            }
+        }
+    }
+}

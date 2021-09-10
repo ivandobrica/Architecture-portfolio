@@ -5,6 +5,8 @@
     height: calc(var(--vh, 1vh) * 100);
     &__heading {
         height: 50%;
+        z-index: 1;
+        position: relative;
     }
     &__main-heading {
         font-size: 2rem;
@@ -48,8 +50,7 @@
     &__image {
         height: 50%;
         position: relative;
-        display: flex;
-        justify-content: center;
+        @include flex($justify-content: center);
     }
 
     &__info {
@@ -125,9 +126,7 @@
 }
 @include lg {
     .banner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex($justify-content: space-between, $align-items: center);
         &__heading {
             height: 100%;
             width: 100%;
