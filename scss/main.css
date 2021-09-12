@@ -14,6 +14,7 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   scrollbar-width: 0;
+  cursor: default;
 }
 
 ::-webkit-scrollbar {
@@ -442,27 +443,27 @@ ul {
 }
 
 .projects .project .project__a {
-  background-image: url("../../assets/Wohnbau/e.jpg");
+  background-image: url("../assets/Wohnbau/e.jpg");
 }
 
 .projects .project .project__b {
-  background-image: url("../../assets/Entwerfen/D.jpg");
+  background-image: url("../assets/Entwerfen/D.jpg");
 }
 
 .projects .project .project__c {
-  background-image: url("../../assets/Tiny House/1.jpg");
+  background-image: url("../assets/Tiny House/1.jpg");
 }
 
 .projects .project .project__d {
-  background-image: url("../../assets/Städtebau/a.jpg");
+  background-image: url("../assets/Städtebau/a.jpg");
 }
 
 .projects .project .project__e {
-  background-image: url("../../assets/Gebäudelehre/1.jpg");
+  background-image: url("../assets/Gebäudelehre/1.jpg");
 }
 
 .projects .project .project__f {
-  background-image: url("../../assets/Hochbau/1.jpg");
+  background-image: url("../assets/Hochbau/1.jpg");
 }
 
 @media (min-width: 768px) {
@@ -713,6 +714,21 @@ ul {
     position: absolute;
     top: -1rem;
     left: -2.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mouse-circle {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin: -16px 0px 0px -16px;
+    border-radius: 50%;
+    pointer-events: none !important;
+    -webkit-box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+    z-index: 10;
+    background-color: #f95f51;
   }
 }
 

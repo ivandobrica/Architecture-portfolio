@@ -21,12 +21,10 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            // opacity: 0.3;
             position: absolute;
             top: 0;
             left: 0;
             transition: 0.5s;
-            // filter: grayscale(100%);
         }
 
         &__info {
@@ -50,22 +48,22 @@
         }
 
         .project__a {
-            background-image: url("../../assets/Wohnbau/e.jpg");
+            background-image: url("../assets/Wohnbau/e.jpg");
         }
         .project__b {
-            background-image: url("../../assets/Entwerfen/D.jpg");
+            background-image: url("../assets/Entwerfen/D.jpg");
         }
         .project__c {
-            background-image: url("../../assets/Tiny House/1.jpg");
+            background-image: url("../assets/Tiny House/1.jpg");
         }
         .project__d {
-            background-image: url("../../assets/Städtebau/a.jpg");
+            background-image: url("../assets/Städtebau/a.jpg");
         }
         .project__e {
-            background-image: url("../../assets/Gebäudelehre/1.jpg");
+            background-image: url("../assets/Gebäudelehre/1.jpg");
         }
         .project__f {
-            background-image: url("../../assets/Hochbau/1.jpg");
+            background-image: url("../assets/Hochbau/1.jpg");
         }
     }
 
