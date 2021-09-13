@@ -35,3 +35,70 @@
         opacity: 0;
     }
 }
+
+@keyframes more {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes circle1 {
+    0% {
+        transform: translate(0%, 0%) rotate(0);
+    }
+    50% {
+        transform: translate(5%, 5%) rotate(360deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(0);
+    }
+}
+@keyframes circle2 {
+    0% {
+        transform: translate(0%, 0%) rotate(0);
+    }
+    50% {
+        transform: translate(5%, 10%) rotate(360deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(0);
+    }
+}
+@keyframes circle3 {
+    0% {
+        transform: translate(0%, 0%) rotate(0);
+    }
+    50% {
+        transform: translate(10%, 5%) rotate(360deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(0);
+    }
+}
+
+
+@keyframes cross1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    50% {
+        transform: translate(-40%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+@keyframes cross2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    50% {
+        transform: translate(-40%, -50%) rotate(-45deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}

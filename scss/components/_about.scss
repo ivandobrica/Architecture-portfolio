@@ -12,7 +12,7 @@
         height: 100%;
         &::before {
             content: "";
-            background-image: url(../../assets/juli-kosolapova-OwNj1uQWPVY-unsplash.jpg);
+            background-image: url(../assets/juli-kosolapova-OwNj1uQWPVY-unsplash.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -63,6 +63,9 @@
     &__CV-lang {
         width: 50%;
     }
+    &__CV-info {
+        width: 50%;
+    }
 
     .is-open {
         &::before { 
@@ -83,13 +86,14 @@
 @include lg {
     .about {
         &__info {
+            padding-left: 5rem;
             margin-right: 10%;
             width: 70%;
             height: 70%;
             position: relative;
             &::before {
                 content: "";
-                background-image: url(../../assets/valentin-balan-pAwgAz3rkcY-unsplash.jpg);
+                background-image: url(../assets/valentin-balan-pAwgAz3rkcY-unsplash.jpg);
             }
             &::after {
                 content: "";

@@ -86,6 +86,24 @@ for(let i = 0; i < viewMore.length; i++) {
 }
 
 
+//open project pop-up
+let popUp = document.querySelectorAll(".pop-up");
+let popUpClose = document.querySelectorAll(".pop-up__back");
+for(let i = 0; i < viewMore.length; i++) {
+  viewMore[i].addEventListener("click", function() {
+    popUp[i].classList.remove("hidden");
+    body.classList.add("no-scroll");
+  })
+}
+for(let i = 0; i < popUpClose.length; i++) {
+  popUpClose[i].addEventListener("click", function() {
+    popUp[i].classList.add("hidden");
+    body.classList.remove("no-scroll");
+  })
+}
+
+
+
 //remove about me image, show CV
 let showCV = document.querySelector(".about__next"), 
     imgContainer = document.querySelector(".about__info"), 
