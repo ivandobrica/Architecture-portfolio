@@ -1,5 +1,5 @@
 .project__start {
-    height: 70vh;
+    padding-top: 5rem;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -7,6 +7,7 @@
     position: relative;
     &-info {
         font-size: 2.5rem;
+        padding-bottom: 10rem;
     }
 
     .scroll-down {

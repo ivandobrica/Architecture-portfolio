@@ -34,6 +34,8 @@
 }
 
 .overlay {
+    overflow: auto;
+    padding-top: 10rem;
     height: 100%;
     width: 100%;
     transform: translate(100%, 0);
