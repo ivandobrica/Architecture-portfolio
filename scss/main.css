@@ -666,82 +666,6 @@ ul {
   background-image: url("../assets/Hochbau/1.jpg");
 }
 
-.projects .pop-up {
-  overflow: auto;
-  width: 100vw;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background-color: #f95f51;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.projects .pop-up__back {
-  width: 75px;
-  height: 75px;
-  position: relative;
-  margin: 1rem;
-  margin-left: auto;
-}
-
-.projects .pop-up__back .circle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 1px solid #fff;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-}
-
-.projects .pop-up__back .circle-first {
-  -webkit-animation: circle1 1s infinite;
-          animation: circle1 1s infinite;
-}
-
-.projects .pop-up__back .circle-second {
-  -webkit-animation: circle2 1s infinite;
-          animation: circle2 1s infinite;
-}
-
-.projects .pop-up__back .circle-third {
-  -webkit-animation: circle3 1s infinite;
-          animation: circle3 1s infinite;
-}
-
-.projects .pop-up__back::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  height: 1px;
-  background-color: #fff;
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
-  -webkit-animation: cross2 1s infinite;
-          animation: cross2 1s infinite;
-}
-
-.projects .pop-up__back::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  height: 1px;
-  background-color: #fff;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
-  -webkit-animation: cross1 1s infinite;
-          animation: cross1 1s infinite;
-}
-
-.projects .pop-up__content-wrapper {
-  padding: 1.5rem;
-}
-
 @media (min-width: 768px) {
   .projects .project__info {
     position: relative;
@@ -765,17 +689,6 @@ ul {
   }
   .projects .project__view-more {
     font-size: 1.25rem;
-  }
-  .projects .pop-up__back {
-    width: 150px;
-    height: 150px;
-  }
-  .projects .pop-up__back .circle {
-    width: 150px;
-    height: 150px;
-  }
-  .projects .pop-up__content-wrapper {
-    padding: 5rem;
   }
 }
 
@@ -886,6 +799,7 @@ ul {
   position: relative;
   width: 80%;
   height: 100%;
+  padding-bottom: 5rem;
 }
 
 .about__info::before {
@@ -1025,6 +939,127 @@ ul {
             box-shadow: 0 0 16px rgba(255, 255, 255, 0);
     z-index: 11;
     background-color: #f95f51;
+  }
+}
+
+.pop-up {
+  overflow: auto;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #f95f51;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.pop-up__back {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  margin: 1rem;
+  margin-left: auto;
+}
+
+.pop-up__back .circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #fff;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.pop-up__back .circle-first {
+  -webkit-animation: circle1 1s infinite;
+          animation: circle1 1s infinite;
+}
+
+.pop-up__back .circle-second {
+  -webkit-animation: circle2 1s infinite;
+          animation: circle2 1s infinite;
+}
+
+.pop-up__back .circle-third {
+  -webkit-animation: circle3 1s infinite;
+          animation: circle3 1s infinite;
+}
+
+.pop-up__back::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  -webkit-animation: cross2 1s infinite;
+          animation: cross2 1s infinite;
+}
+
+.pop-up__back::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-animation: cross1 1s infinite;
+          animation: cross1 1s infinite;
+}
+
+.pop-up__content-wrapper {
+  padding: 1.5rem;
+}
+
+.pop-up__content {
+  margin: 1rem 0;
+}
+
+.pop-up__content--reverse {
+  margin: 1rem 0;
+}
+
+@media (min-width: 1025px) {
+  .pop-up__back {
+    width: 150px;
+    height: 150px;
+  }
+  .pop-up__back .circle {
+    width: 150px;
+    height: 150px;
+  }
+  .pop-up__content-wrapper {
+    padding: 0 5rem;
+  }
+  .pop-up__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .pop-up__content:not(:first-of-type) {
+    margin-top: 10rem;
+  }
+  .pop-up__content--reverse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    margin-top: 10rem;
+  }
+  .pop-up__content-image {
+    width: 70%;
   }
 }
 
